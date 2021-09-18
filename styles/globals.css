@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.thank-you {
+  margin: 50px auto auto 100px;
+  background: lightgray;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: x-large;
+  font-weight:500;
+}
