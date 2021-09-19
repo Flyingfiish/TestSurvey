@@ -11,6 +11,7 @@ const questions = [
     variants: [
       {
         text: "Позитивно",
+        
       },
       {
         text: "Негативно",
