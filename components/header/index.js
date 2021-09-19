@@ -8,12 +8,6 @@ export default function Header() {
       </div>
       <div className="header-navs">
         <div className="header-nav-link">
-          <Link href="/tik">Тык</Link>
-        </div>
-        <div className="header-nav-link">
-          <Link href="/">Test Nav Link</Link>
-        </div>
-        <div className="header-nav-link">
           <Link href="/">Test Nav Link</Link>
         </div>
       </div>
