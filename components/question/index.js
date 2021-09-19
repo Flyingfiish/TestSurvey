@@ -5,6 +5,7 @@ export default function Question({ question, onAnswer, numberInfo }) {
     <div className="question">
         <div className="question-number">
             Вопрос {numberInfo.index}/{numberInfo.length}
+            
         </div>
       <div className="question-text">{question.text}</div>
       <div className="question-variants">{getVariants(question.variants, onAnswer)}</div>

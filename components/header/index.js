@@ -5,6 +5,7 @@ export default function Header() {
     <div className="header">
       <div className="header-logo">
         <Link href="/">BRAND</Link>
+        
       </div>
       <div className="header-navs">
         <div className="header-nav-link">

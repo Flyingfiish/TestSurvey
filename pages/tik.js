@@ -9,6 +9,7 @@ export default function Tik() {
   return(<div><div>
     <Header>
     </Header>
+    
     <div className="thank-you">Тык!</div>
   </div></div>);
 }
