@@ -33,7 +33,7 @@ const questions = [
 ];
 
 function fakeRegister() {
-	let widget = document.getElementById("chat21-container").parentElement;
+	const widget = document.getElementById("chat21-container").parentElement;
 	widget.nextSibling.remove();
 	widget.remove();
 	reloadScript();
