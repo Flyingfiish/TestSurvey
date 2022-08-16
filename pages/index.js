@@ -36,7 +36,7 @@ function fakeRegister() {
 	let widget = document.getElementById("chat21-container").parentElement;
 	widget.nextSibling.remove();
 	widget.remove();
-	loadScript();
+	reloadScript();
 }
 
 function reloadScript() {
