@@ -37,7 +37,7 @@ function register() {
 		"account_name": "Артем",
 		"h11_account_id": "1",
 		"h11_user_id": "1",
-		"registration_step": "complete"
+		"registration_step": "completed"
 	};
 }
 
