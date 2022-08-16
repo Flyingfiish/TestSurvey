@@ -18,6 +18,12 @@ export default function Document() {
 					data-widget-user-login="default"
 					data-widget-user-name=""
 					data-widget-user-email=""
+					data-widget-user-payload='{
+						"account_name": "",
+						"h11_account_id":"",
+						"h11_user_id":"",
+						"registration_step": "not_complete"
+						}'
 					src="https://chat.autofaq.ai/widget/static/js/main.js"
 					id="autofaqWidget"
 				></script>
