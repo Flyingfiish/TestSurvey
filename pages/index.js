@@ -32,12 +32,15 @@ const questions = [
 	}
 ];
 
-function register() {
-	document.getElementById("autofaqWidget").remove();
+function fakeRegister() {
+	let widget = document.getElementById("chat21-container").parentElement;
+	widget.nextSibling.remove();
+	widget.remove();
 	loadScript();
 }
 
-function loadScript() {
+function reloadScript() {
+  document.getElementById("autofaqWidget").remove();
 	var head = document.getElementsByTagName("head")[0];
 	var script = document.createElement("script");
 	script.setAttribute("src", "https://chat.autofaq.ai/widget/static/js/main.js");
@@ -45,7 +48,7 @@ function loadScript() {
 	script.setAttribute("data-widget-service-id", "1c3476b7-4cd9-41cc-aec3-096858431fff");
 	script.setAttribute("data-widget-channel-id", "e7f927e4-b205-48e5-ae17-467761056ef2");
 	script.setAttribute("data-widget-user-login", "");
-	script.setAttribute("data-widget-user-name", "артем лол");
+	script.setAttribute("data-widget-user-name", "Артем");
 	script.setAttribute("data-widget-user-email", "");
 	script.setAttribute("id", "autofaqWidget");
 	script.setAttribute(
@@ -84,7 +87,7 @@ export default function Home() {
           else setIsEnd(true);
         }}
       ></Question> */}
-				<div onClick={register} className="completeRegistration">
+				<div onClick={fakeRegister} className="completeRegistration">
 					<p>Зарегистироваться</p>
 				</div>
 			</div>
