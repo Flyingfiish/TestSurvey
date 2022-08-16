@@ -33,12 +33,39 @@ const questions = [
 ];
 
 function register() {
-	window.widgetUserPayload = {
-		"account_name": "Артем",
-		"h11_account_id": "1",
-		"h11_user_id": "1",
-		"registration_step": "completed"
-	};
+	document.getElementById("autofaqWidget").remove();
+	loadScript();
+}
+
+function loadScript() {
+	var head = document.getElementsByTagName("head")[0];
+	var script = document.createElement("script");
+	script.setAttribute("src", "https://chat.autofaq.ai/widget/static/js/main.js");
+	script.setAttribute("data-widget-host", "https://chat.autofaq.ai");
+	script.setAttribute("data-widget-service-id", "1c3476b7-4cd9-41cc-aec3-096858431fff");
+	script.setAttribute("data-widget-channel-id", "e7f927e4-b205-48e5-ae17-467761056ef2");
+	script.setAttribute("data-widget-user-login", "");
+	script.setAttribute("data-widget-user-name", "артем лол");
+	script.setAttribute("data-widget-user-email", "");
+	script.setAttribute("id", "autofaqWidget");
+	script.setAttribute(
+		"data-widget-new-messages",
+		JSON.stringify({
+			"badge": true,
+			"favicon": true,
+			"notifications": true
+		})
+	);
+	script.setAttribute(
+		"data-widget-user-payload",
+		JSON.stringify({
+			"account_name": "Артем",
+			"h11_account_id": "1",
+			"h11_user_id": "1",
+			"registration_step": "completed"
+		})
+	);
+	head.appendChild(script);
 }
 
 export default function Home() {
@@ -58,7 +85,7 @@ export default function Home() {
         }}
       ></Question> */}
 				<div onClick={register} className="completeRegistration">
-					<p>Закончить регистрацию</p>
+					<p>Зарегистироваться</p>
 				</div>
 			</div>
 		);

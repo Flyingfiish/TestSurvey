@@ -6,10 +6,7 @@ import Link from "next/link";
 export default function Document() {
 	return (
 		<Html>
-			<Head />
-			<body>
-				<Main />
-				<NextScript />
+			<Head>
 				<link href="https://chat.autofaq.ai/widget/static/css/main.css" rel="stylesheet" />
 				<script
 					data-widget-host="https://chat.autofaq.ai"
@@ -22,11 +19,20 @@ export default function Document() {
 						"account_name": "",
 						"h11_account_id":"",
 						"h11_user_id":"",
-						"registration_step": "not_complete"
+						"registration_step": "ncompleted"
 						}'
 					src="https://chat.autofaq.ai/widget/static/js/main.js"
 					id="autofaqWidget"
+					data-widget-new-messages='{
+						"badge": true, 
+						"favicon": true, 
+						"notifications": true
+					}'
 				></script>
+			</Head>
+			<body>
+				<Main />
+				<NextScript />
 			</body>
 		</Html>
 	);
