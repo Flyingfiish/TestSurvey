@@ -33,13 +33,18 @@ const questions = [
 ];
 
 function fakeRegister() {
+	const name = document.getElementById("name").value;
+	if (name == "" || name == undefined || name == null) {
+		alert("Введите имя");
+		return;
+	}
 	const widget = document.getElementById("chat21-container").parentElement;
 	widget.nextSibling.remove();
 	widget.remove();
-	reloadScript();
+	reloadScript(name);
 }
 
-function reloadScript() {
+function reloadScript(name) {
 	document.getElementById("autofaqWidget").remove();
 	var head = document.getElementsByTagName("head")[0];
 	var script = document.createElement("script");
@@ -48,7 +53,7 @@ function reloadScript() {
 	script.setAttribute("data-widget-service-id", "1c3476b7-4cd9-41cc-aec3-096858431fff");
 	script.setAttribute("data-widget-channel-id", "e7f927e4-b205-48e5-ae17-467761056ef2");
 	script.setAttribute("data-widget-user-login", "");
-	script.setAttribute("data-widget-user-name", document.getElementById("name").value);
+	script.setAttribute("data-widget-user-name", name);
 	script.setAttribute("data-widget-user-email", "");
 	script.setAttribute("id", "autofaqWidget");
 	script.setAttribute(
@@ -87,9 +92,14 @@ export default function Home() {
           else setIsEnd(true);
         }}
       ></Question> */}
-				<input id="name"></input>
-				<div onClick={fakeRegister} className="completeRegistration">
-					<p>Зарегистироваться</p>
+				<div id="register-container">
+					<div>
+						<label htmlFor="name">Имя</label>
+						<input id="name" name="name"></input>
+						<div onClick={fakeRegister} className="completeRegistration">
+							<p>Зарегистироваться</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
